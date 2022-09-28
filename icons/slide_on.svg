@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="slide_on.svg"
+   id="svg4"
+   viewBox="0 0 700.01001 373.34"
+   version="1.1"
+   height="373.34pt"
+   width="700.01001pt">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg4"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="1772.2092"
+     inkscape:cx="-178.731"
+     inkscape:zoom="0.13125"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     id="namedview6"
+     inkscape:window-height="1147"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     style="fill:#ff6600"
+     id="path2"
+     d="m 0,186.67 c 0,103.09 83.578,186.67 186.67,186.67 h 326.67 c 103.09,0 186.67,-83.578 186.67,-186.67 C 700.01,83.58 616.432,0 513.34,0 L 186.67,0.004 C 83.58,0.004 0,83.582 0,186.664 Z m 396.69,0 C 396.69,122.225 448.909,70 513.36,70 c 64.469,0 116.67,52.219 116.67,116.67 0,64.445 -52.195,116.67 -116.67,116.67 -64.449,0 -116.67,-52.219 -116.67,-116.67 z" />
+</svg>

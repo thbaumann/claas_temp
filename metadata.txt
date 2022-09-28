@@ -1,0 +1,7 @@
+[general]
+name=ClaasPlugin
+description=Claas
+version=1.0
+qgisMinimumVersion=3.16
+author=XXX
+email=XXX@XXX.com
