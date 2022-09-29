@@ -1,7 +1,8 @@
 # encoding: utf-8
 #-----------------------------------------------------------
-# Copyright (C) 2020 Thomas Baumann
+# Copyright (C) 2022 Thomas Baumann, parts recycled from https://github.com/enricofer/autoSaver
 # based on qgis-minimal-plugin from Martin Dobias
+
 #-----------------------------------------------------------
 # Licensed under the terms of GNU GPL 2
 #
@@ -9,6 +10,9 @@
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 2 of the License, or
 # (at your option) any later version.
+#
+# NUR ZU EXPERIMENTELLEN ZWECKEN. FUER PRODUKTIVBETRIEB BESSER MITTELS QGSTASK bzw.EIGENEM THREAD FUER DAS FILEWATCH !!!
+# 
 #---------------------------------------------------------------------
 from qgis.core import Qgis, QgsProject, QgsExpression, QgsFeatureRequest
 from qgis.PyQt.QtWidgets import QAction, QMessageBox
@@ -19,6 +23,8 @@ import os
 def classFactory(iface):
     return ClaasPlugin(iface)
 
+# LEDIGLICH EIN EINFACHER PROOF OF CONCEPT UND KEIN FERTIGES PLUGIN.
+# NUR ZU EXPERIMENTELLEN ZWECKEN. FUER PRODUKTIVBETRIEB BESSER MITTELS QGSTASK bzw.EIGENEM THREAD FUER DAS FILEWATCH UND SIGNAL AN DEN HAUPT-THREAD !!!
 
 class ClaasPlugin:
     def __init__(self, iface):
@@ -57,12 +63,15 @@ class ClaasPlugin:
             
 
     def cronEvent(self):
-        print("Hallo")
+        #print("Hallo")
         #https://nyalldawson.net/2016/10/speeding-up-your-pyqgis-scripts/
         self.vlayer.dataProvider().forceReload()
+        # offene Fragen: brauchen wir zwingend einen forceReload? gibt es einen FeatureRequest, der direkt auf die Platte geht? bringt QgsFeatureRequest.NoGeometry was, wenn wir eh einen ForceReload machen? 
+        
         request = QgsFeatureRequest().setFlags(QgsFeatureRequest.NoGeometry).setSubsetOfAttributes(['M1'], self.vlayer.fields() )
         it = self.vlayer.getFeatures(request)
         anz = len(list(it))
         if anz > 0:
             self.vlayer.selectByExpression(self.expr_string )
             self.iface.mapCanvas().zoomToSelected(self.vlayer)
+        # besser waere es ggf. noch die schon gefundenen Treffer in eine Liste zu schreiben und dann nur noch zu testen, ob es neue Treffer gibt
